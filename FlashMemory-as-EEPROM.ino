@@ -60,7 +60,7 @@ void readEEPROM(uint8_t flashAddr, uint8_t flashSize)
         {
             Serial.println("寫入6段轉速初始值");
             writeEEPROM(fanGear_Addr, fanGear_SIZE);
-	    }
+        }
     }
     else if(flashAddr == uvTime_Addr)
     {
@@ -133,7 +133,7 @@ void writeEEPROM(uint8_t flashAddr, uint8_t flashSize)
                 flashWrBuf[i] = uvParams.uvCycleTime;
             else if(i == 1)
                 flashWrBuf[i] = uvParams.uvOnTime;
-	    }
+        }
     }
     else if(flashAddr == rfAddrID_Addr)
     {
